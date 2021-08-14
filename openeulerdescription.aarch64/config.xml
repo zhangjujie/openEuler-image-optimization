@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<image schemaversion="6.2" name="openeuler">
+    <description type="system">
+        <author>openEuler</author>
+        <contact>community@openeuler.org</contact>
+        <specification>openEuler V1.1 docker container</specification>
+    </description>
+    <preferences>
+        <type image="docker" container="openeuler">
+            <machine>
+                <vmdisk/>
+                <vmnic interface="eth0" mode="veth"/>
+            </machine>
+        </type>
+        <version>1.0.0</version>
+        <packagemanager>yum</packagemanager>
+        <rpm-check-signatures>false</rpm-check-signatures>
+        <rpm-excludedocs>true</rpm-excludedocs>
+        <rpm-force>true</rpm-force>
+        <locale>en_US</locale>
+        <keytable>us.map.gz</keytable>
+        <hwclock>utc</hwclock>
+        <timezone>Asia/Beijing</timezone>
+    </preferences>
+    <repository type="rpm-md" alias="obs-standard">
+        <source path="https://repo.huaweicloud.com/openeuler/openEuler-21.03/everything/aarch64/"/>
+    </repository>
+    <packages type="bootstrap">
+        <package name="filesystem"/>
+        <package name="/root/pkgs/coreutils-single-8.30-8.el8.aarch64.rpm"/>
+        <package name="openEuler-release" />
+    </packages>
+    <packages type="image">
+        <package name="yum"/>
+        <package name="procps-ng"/>
+        <package name="gdb-gdbserver"/>
+        <package name="rootfiles"/>
+        <package name="tar"/>
+        <package name="vim-minimal"/>
+        <package name="publicsuffix-list-dafsa"/>
+    </packages>
+    <packages type="delete">
+        <package name="crontabs"/>
+        <package name="gdbm"/>
+        <package name="fuse-common"/>
+        <package name="findutils"/>
+        <package name="ncurses"/>
+        <package name="libarchive"/>
+        <package name="info"/>
+        <package name="libpng"/>
+        <package name="libev"/>
+        <package name="libevent"/>
+        <package name="libtasn1"/>
+        <package name="libtirpc"/>
+        <package name="libverto"/>
+        <package name="libksba"/>
+        <package name="libreport-filesystem"/>
+        <package name="libsepol"/>
+        <package name="logrotate"/>
+        <package name="pkgconf"/>
+        <package name="publicsuffix-list"/>
+        <package name="slang"/>
+        <package name="newt"/>
+        <package name="tcl"/>
+        <package name="npth"/>
+    </packages>
+</image>
