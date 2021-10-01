@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<image schemaversion="6.2" name="openEuler">
+    <description type="system">
+        <author>openEuler</author>
+        <contact>community@openeuler.org</contact>
+        <specification>openEuler V1.1 docker container</specification>
+    </description>
+    <preferences>
+        <type image="docker" container="openeuler">
+            <machine>
+                <vmdisk/>
+                <vmnic interface="eth0" mode="veth"/>
+            </machine>
+        </type>
+        <version>1.0.0</version>
+        <packagemanager>yum</packagemanager>
+        <rpm-check-signatures>false</rpm-check-signatures>
+        <rpm-excludedocs>true</rpm-excludedocs>
+        <rpm-force>true</rpm-force>
+        <locale>en_US</locale>
+        <keytable>us.map.gz</keytable>
+        <hwclock>utc</hwclock>
+        <timezone>Asia/Beijing</timezone>
+    </preferences>
+    <repository type="rpm-md" alias="obs-standard">
+        <source path="https://repo.huaweicloud.com/openeuler/openEuler-21.03/everything/x86_64/"/>
+    </repository>
+    <packages type="bootstrap">
+        <package name="filesystem"/>
+        <package name="openEuler-release"/>
+        <package name="/root/pkgs-x86_64/*.rpm"/>
+    </packages>
+    <packages type="image">
+        <package name="yum"/>
+        <package name="procps-ng"/>
+        <package name="gdb-gdbserver"/>
+        <package name="rootfiles"/>
+        <package name="tar"/>
+        <package name="vim-minimal"/>
+    </packages>
+    <packages type="delete">
+        <package name="alternatives"/>
+        <package name="chkconfig"/>
+        <package name="fuse"/>
+        <package name="gamin"/>
+        <package name="libev"/>
+        <package name="libevent"/>
+        <package name="libss" />
+        <package name="libpng"/>
+        <package name="slang"/>
+        <package name="tcl"/>
+        <package name="ntsysv"/>
+        <package name="newt"/>
+        <package name="ncurses"/>
+        <package name="npth"/>
+    </packages>
+</image>
