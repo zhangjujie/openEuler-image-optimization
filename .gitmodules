@@ -1,0 +1,33 @@
+[submodule "bzip2"]
+	path = bzip2
+	url = https://gitee.com/wojibayang/bzip2.git
+[submodule "e2fsprogs"]
+	path = e2fsprogs
+	url = https://gitee.com/wojibayang/e2fsprogs.git
+[submodule "chkconfig"]
+	path = chkconfig
+	url = https://gitee.com/wojibayang/chkconfig.git
+[submodule "brotli"]
+	path = brotli
+	url = https://gitee.com/wojibayang/brotli.git
+[submodule "elfutils"]
+	path = elfutils
+	url = https://gitee.com/wojibayang/elfutils.git
+[submodule "gdbm"]
+	path = gdbm
+	url = https://gitee.com/wojibayang/gdbm.git
+[submodule "libverto"]
+	path = libverto
+	url = https://gitee.com/wojibayang/libverto.git
+[submodule "libxml2"]
+	path = libxml2
+	url = https://gitee.com/wojibayang/libxml2.git
+[submodule "lua"]
+	path = lua
+	url = https://gitee.com/wojibayang/lua.git
+[submodule "zstd"]
+	path = zstd
+	url = https://gitee.com/wojibayang/zstd.git
+[submodule "lz4"]
+	path = lz4
+	url = https://gitee.com/wojibayang/lz4.git
